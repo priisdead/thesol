@@ -12,7 +12,17 @@ const ILL_KEYFRAMES = `
   .ill-accent svg { animation: illFloat 6s ease-in-out infinite; display: block; }
   .ill-accent .ill-cloud { transform-box: fill-box; transform-origin: center; animation: illPulse 5s ease-in-out infinite; }
   .ill-accent .wisp { transform-box: fill-box; transform-origin: bottom; animation: wispRise 3s ease-out infinite; }
-  @media (max-width: 820px) { .ill-accent { display: none; } }
+  @media (max-width: 820px) {
+    .ill-accent {
+      position: static;
+      transform: none;
+      opacity: 0.85;
+      display: flex;
+      justify-content: center;
+      margin: 6px auto -4px;
+    }
+    .ill-accent svg { width: auto !important; height: 58px !important; }
+  }
 `;
 
 // Lit cigarette blowing a fluffy smoke cloud
