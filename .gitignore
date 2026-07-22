@@ -1,0 +1,8 @@
+node_portable/
+node_modules/
+dist/
+
+# Oversized videos — exceed GitHub's 100MB limit. Host separately or use Git LFS.
+public/videos/SOL FRANCES.mp4
+src/SOL FRANCES.mp4
+*.mp4
