@@ -101,6 +101,20 @@ export default function Facilities() {
             background: "linear-gradient(135deg, #161616 0%, #050505 100%)",
           }}
         >
+          <style>{`
+            @media (max-width: 700px) {
+              .process-video-hero {
+                aspect-ratio: auto !important;
+                height: 66vh !important;
+                min-height: 430px !important;
+                max-height: none !important;
+                margin-bottom: 56px !important;
+              }
+              .process-video-hero .pv-title { font-size: 28px !important; margin-top: 10px !important; margin-bottom: 8px !important; }
+              .process-video-hero .pv-copy { font-size: 14px !important; }
+              .process-video-hero .pv-overlay { padding: 22px !important; }
+            }
+          `}</style>
           <video
             autoPlay
             muted
@@ -133,6 +147,7 @@ export default function Facilities() {
 
           {/* Overlay title */}
           <div
+            className="pv-overlay"
             style={{
               position: "absolute",
               left: 0,
@@ -144,7 +159,7 @@ export default function Facilities() {
           >
             <span className="section-badge">INSIDE THE FACILITY</span>
             <h2
-              className="section-title"
+              className="section-title pv-title"
               style={{
                 fontSize: "clamp(32px, 5vw, 60px)",
                 marginTop: "14px",
@@ -154,6 +169,7 @@ export default function Facilities() {
               THE SOL PROCESS
             </h2>
             <p
+              className="pv-copy"
               style={{
                 maxWidth: "580px",
                 color: "rgba(255,255,255,0.82)",
